@@ -334,7 +334,7 @@ def  buscarCurso(request):
 
             nombre = request.GET["nombre"]
             cursos = Curso.objects.filter(nombre__icontains= nombre)
-            return render(request , "resultado_busqueda_alumno.html" , {"cursos":cursos})
+            return render(request , "resultado_busqueda.html" , {"cursos":cursos})
             
         else:
         
