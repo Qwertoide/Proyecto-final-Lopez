@@ -1,0 +1,43 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+ 
+
+{% block contenido %}
+
+    
+<br>
+<br><br>
+<div class="container-fluid">
+    
+    <div class="container">
+
+
+        <br><br><br>
+
+        <h2 class="fw-bolder">Vuelva pronto!</h2>
+
+
+        <br><br>
+        
+        
+        
+        
+        <form method="post" action="{% url 'logout' %}">
+            {% csrf_token %}
+            <a href="{% url 'home' %}" class="btn btn-dark"> Volver </a>
+        </form>
+        
+    </div>
+
+    
+    
+
+
+</div>
+
+
+<br><br><br><br><br><br><br><br><br><br>
+
+{% endblock %}

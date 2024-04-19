@@ -1,0 +1,90 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+
+{% block contenido %}
+<header class="py-5 bg-light border-bottom mb-4">
+    <div class="container">
+        <div class="text-center my-5">
+            <h1 class="fw-bolder">Editar perfil de {{usuario}}</h1>
+        </div>
+    </div>
+  </header>
+<div class="container-xl">
+
+
+
+    <form action="" method="post" enctype="multipart/form-data">
+        
+        {% csrf_token %}
+        
+        <br>
+
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+      
+                        <input type="email" class="form-control" placeholder="Email..." name="email" maxlength="320" required="" id="id_email">
+      
+      
+                    </td>
+                </tr>
+    
+                <tr>
+                    <td>
+      
+                        <input type="password" class="form-control" placeholder="Nueva contraseña..." name="password1" required="" id="id_password1">
+      
+      
+                    </td>
+                </tr>
+    
+                <tr>
+                    <td>
+      
+                        <input type="password" class="form-control" placeholder="Repita la contraseña..." name="password2" required="" id="id_password2">
+      
+      
+        
+      
+                    </td>
+                </tr>
+                
+                <table>
+                    <br>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <label for="avatar" class="form-label">Foto de perfil:</label>
+                                <input type="file" class="form-control" name="imagen" required="" id="id_imagen">
+              
+              
+                
+              
+                            </td>
+                        </tr>
+                    
+                    </tbody>
+                </table>
+                  
+            
+            </tbody>
+        </table>
+        <br>
+        <button type="submit" class="btn btn-dark">Enviar</button>
+    
+    </form>
+    
+</div>
+
+
+  <br><br><br><br>
+  
+   
+
+{% endblock %}
+
+
+

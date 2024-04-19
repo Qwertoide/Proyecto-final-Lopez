@@ -1,0 +1,38 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+ 
+
+{% block contenido %}
+<br>
+
+<div class="container">
+    
+    <br><br><br><br>
+
+
+
+    <h2> {{mensaje}} </h2>
+
+
+    <br><br>
+    
+    
+    <div class="btn-group" role="group" aria-label="Default button group">
+        
+        <form method="post" action="{% url 'logout' %}">
+            {% csrf_token %}
+            <a href="{% url 'home' %}" class="btn btn-dark"> Volver </a>
+        </form>
+
+      </div>
+      
+
+</div>
+
+
+
+<br><br><br><br><br><br><br><br>
+
+{% endblock %}

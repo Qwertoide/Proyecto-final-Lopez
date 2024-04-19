@@ -1,0 +1,51 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+ 
+
+{% block contenido %}
+<br>
+<header class="py-5 bg-light border-bottom mb-4">
+  <div class="container">
+      <div class="text-center my-5">
+          <h1 class="fw-bolder">{{mensaje}} </h1>
+      </div>
+  </div>
+</header>
+
+<div class="container">
+
+<br><br>
+
+
+
+  <div class="card mb-4" style="max-width: 750px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="{{request.user.avatar.imagen.url}}" class="img-fluid rounded-start" width="400" height="400">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          
+          <h1 class="card-title">{{usuario}}</h5>
+            
+            <br>
+
+          <div class="d-grid gap-2" class="btn-group" role="group" aria-label="Default button group">
+            <a href="{% url 'editarPerfil' %}" type="button" class="btn btn-outline-dark">Editar perfil</a>
+            <a href="{% url 'logout' %}" type="button" class="btn btn-outline-dark">Cerrar Sesión</a>
+          </div>
+  
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br><br><br>
+
+{% endblock %}
+
+
+

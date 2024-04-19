@@ -1,0 +1,65 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+ 
+
+{% block contenido %}
+
+
+
+<br>
+
+
+<header class="py-5 bg-light border-bottom mb-4">
+    <div class="container">
+        <div>
+            <h1 class="fw-bolder">Ingrese sus datos</h1>
+        </div>
+    </div>
+</header>
+
+
+
+
+    
+    <form action="" method="POST">
+
+        {% csrf_token %}
+
+
+        <div class="container">
+            <div class="form-floating mb-3">
+                <p>
+                    <label for="id_username"></label>
+                    <input type="text" class="form-control" placeholder="Usuario..." name="username" autofocus="" autocapitalize="none" autocomplete="username" maxlength="150" required="" id="id_username">
+                
+                
+                </p>
+                <p>
+                    <label for="id_password"></label>
+                    <input type="password" class="form-control" placeholder="Contraseña..." name="password" autocomplete="current-password" required="" id="id_password">              
+                
+                </p>
+            </div>
+
+            <div class="container">
+
+                <h4 class="text text-danger"> {{mensaje}} </h4>
+            
+            </div>
+        
+            <br>
+        
+            <button type="submit" class="btn btn-dark">Enviar</button>
+        
+        </div>
+        
+    </form>
+    <br>
+    <br>
+    <br>
+
+
+
+{% endblock %}
