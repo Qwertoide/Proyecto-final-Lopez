@@ -96,9 +96,10 @@ def editarPerfil(request):
             
             if mi_formulario.cleaned_data.get('imagen'):
                 
-                datos = mi_formulario.cleaned_data
-                usuario.avatar.imagen = mi_formulario.cleaned_data.get('imagen')
-                usuario.avatar.save()
+                datos = mi_formulario.cleaned_data                
+                
+                avatar = Avatar(imagen=datos["imagen"], user= usuario)
+                avatar.save()
 
             mi_formulario.save()
 

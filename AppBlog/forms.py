@@ -24,7 +24,7 @@ class UserEditForm(UserChangeForm):
     email = forms.EmailField(label="Modificar")
     password1 = forms.CharField(label="Contraseña" , widget=forms.PasswordInput)
     password2 = forms.CharField(label="Repetir la contraseña" , widget=forms.PasswordInput)
-    imagen = forms.ImageField(label="avatar", required="False")
+    imagen = forms.ImageField(label="Avatar", required="False")
     
     class Meta:
         model = User
